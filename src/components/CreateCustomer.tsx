@@ -1,6 +1,5 @@
-import { FormEvent, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { ICustomerCreate } from "../models/Customer";
-import { useCustomers } from "../hooks/useCustomers";
 
 const defaultPayload: ICustomerCreate = {
   firstname: "",
