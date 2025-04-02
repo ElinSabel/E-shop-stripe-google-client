@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from "axios";
-export const API_URL = "https://e-shop-stripe-google-api.vercel.app/";
+export const API_URL = "https://e-shop-stripe-google-api.vercel.app";
 
 export const api = axios.create({
   baseURL: API_URL,
