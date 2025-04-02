@@ -1,0 +1,397 @@
+*{
+  box-sizing: content-box;
+  margin: 0;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  padding: 30px;
+}
+h4 {
+  margin: 5px 0px;
+}
+
+main {
+  background-color: beige;
+  min-height: 100vh;
+  text-align: center;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid black;
+}
+
+header, footer {
+  height: 50px;
+  background-color:wheat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+footer {
+  font-size: small;
+  border-top: 1px solid black;;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+footer a:hover, header a:hover{
+  transform: scale(1.1);
+}
+
+#cart-icon {
+  height: 40px;
+  position: absolute;
+  right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* --- Generic CSS --- */
+
+input, button, select {
+  border-radius: 5px;
+  border: 1px solid #333;
+  background-color: white;
+  padding: 5px;
+}
+
+.update-button:hover, .create-product-button:hover, .add-to-cart-button:hover {
+  background-color: rgba(79, 227, 114, 0.487);
+}
+
+.delete-button:hover {
+  background-color: rgb(255, 130, 130);
+}
+
+.input-small{
+  width: 60px;
+}
+
+.input-medium{
+  width: 90px;
+}
+
+.update-button {
+  background-color:rgba(142, 252, 168);
+}
+
+.delete-button {
+  background-color: rgb(250, 177, 177);
+}
+
+.small-image {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  background-color: white;
+  border-radius: 5px;
+  object-fit: contain;
+}
+
+.order-container {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: space-around;
+  max-width: 800px;
+}
+/* --- Products Page --- */
+
+#search-field-section{
+  display: flex;
+  justify-content: center;
+}
+
+#search-field {
+  width: 50vw;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+#products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
+}
+
+#products-container input {
+  padding: 4px;
+}
+
+#product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 250px;
+  height: 380px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: white;
+  text-align: center;
+}
+
+#product-image {
+  height: 150px;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+
+#product-info {
+  height: 170px;
+  background-color: white;
+  text-align: left;
+}
+
+.product-description {
+  overflow: auto;
+  height: 2.2rem;
+}
+
+.product-title {
+  height: 65px;
+}
+
+.in-stock {
+  color: green;
+}
+
+.almost-sold-out {
+  color: orange;
+}
+
+.not-in-stock {
+  color: red;
+}
+
+.add-to-cart{
+  display: flex;
+  gap: 5px;
+}
+
+.add-to-cart-input{
+  width: 70px;
+}
+
+.add-to-cart-button{
+  width: 70px;
+  background-color: rgba(142, 252, 168, 0.487);
+}
+
+.read-more-button{
+  width: 70px;
+}
+
+.read-more-button:hover{
+  width: 70px;
+  background-color: rgb(246, 250, 210);
+}
+
+/* --- Product Page --- */
+
+#product-container {
+  display: grid;
+  gap: 30px;  
+  padding: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.image-div {
+  width: 50vw;
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: 0px 0px 1px 1px;
+  background-color: white;
+}
+
+#single-product-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+}
+
+#product-information{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+/* --- Cart --- */
+
+#cart-product {
+  display: grid;
+  max-width: 700px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 5px;
+  padding: 10px;
+  align-items: center;
+  margin: auto;
+}
+
+
+
+.cart-button {
+  width: 15px;
+}
+
+#cart-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 30px;
+}
+
+#customer-info {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#pay{
+  margin: auto;
+}
+
+/* --- Admin --- */
+
+#admin-div {
+  margin: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.admin-icons {
+  height: 150px;
+}
+
+/* --- Admin Products - Add Products--- */
+
+#create-product-container {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
+}
+
+#create-product-container input, #create-product-container button {
+padding: 7px;
+}
+
+#create-product {
+  display: flex;
+  width: 350px;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.create-product-button{
+  width: 50%;
+  margin: auto;
+}
+
+
+#create-product-image-div{
+  width: 350px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border: 0.5px solid black;
+  border-radius: 10px;
+}
+
+#create-product-image-div h3 {
+  align-content: center;
+color: #000000b8;
+}
+
+#create-product-image {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+
+
+/* --- Admin Products - List Products & Admin Customers --- */
+
+.list {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.display-list {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+}
+
+
+/* --- Admin Orders --- */
+
+#orders-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+#order-container {
+  display: grid;
+  gap: 5px;
+  padding: 5px;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  min-width: 275px;
+  height: 200px;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 10px;
+}
+ 
+#order-info {
+  display: flex;
+  flex-direction: column;
+  width: 110px;
+  gap: 5px;
+  margin: auto;
+  font-size: smaller;
+}
+
+#order-buttons {
+  gap: 5px;
+  display: flex;
+}
+
+/* --- Admin Order --- */
+
+.single-order-container, #order-items-container {
+  padding: 20px;
+}
+
+.quantity-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
