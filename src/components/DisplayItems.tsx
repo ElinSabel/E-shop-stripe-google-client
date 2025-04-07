@@ -9,7 +9,7 @@ interface IDisplayItemsProps {
 }
 
 export const DisplayItems = ({ i }: IDisplayItemsProps) => {
-  const { products } = useProducts();
+/*   const { products } = useProducts(); */
   const { handleAddToCart } = useCart();
   const [cartValue, setCartValue] = useState<number>(1);
   const { error, loading } = useProducts();
