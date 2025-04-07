@@ -75,7 +75,7 @@ export const Cart = () => {
     const fetchClientSecret = async () => {
       try {
         const response = await fetch(
-          "https://e-shop-stripe-google-client-7heo.vercel.app/stripe/create-checkout-session-embedded",
+          "https://e-shop-stripe-google-api.vercel.app/stripe/create-checkout-session-embedded",
           {
             method: "POST",
             headers: {
