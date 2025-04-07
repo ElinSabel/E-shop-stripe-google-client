@@ -12,6 +12,10 @@ export const Products = () => {
   const [error, setError] = useState<string>("");
   const [pageIndex, setPageIndex] = useState<number>(1);
 
+  useEffect(() => {
+      handleSearch();
+  }, [searchText]);
+
   const handleSearch = async () => {
     if (searchText.length <= 3) {
       setError("Must type a longer search text");
@@ -68,12 +72,6 @@ export const Products = () => {
               setSearchText(e.target.value)
             }
           />
-          <button
-            className="border border-gray-400 rounded p-1"
-            onClick={handleSearch}
-          >
-            Search
-          </button>
         </form>
       </section>
 
@@ -86,28 +84,26 @@ export const Products = () => {
         ) : (
           <>
             {items &&
-              items.map((item) => <DisplayItems key={item.link} i={item} />)}
+                items.map((item) => <DisplayItems key={item.link} i={item} />)}
+              </>
+              )}
+            </section>
             {items && (
-              <div className="mt-4 flex gap-2">
+              <div>
                 <button
-                  className="border border-gray-400 rounded p-1"
                   onClick={() => setPageIndex((prev) => Math.max(1, prev - 10))}
                   disabled={pageIndex <= 1}
                 >
                   Previous Page
                 </button>
                 <button
-                  className="border border-gray-400 rounded p-1"
                   onClick={() => setPageIndex((prev) => prev + 10)}
                   disabled={items.length < 10}
                 >
                   Next Page
                 </button>
               </div>
-            )}
-          </>
-        )}
-      </section>
+            )}        
     </>
   );
 };

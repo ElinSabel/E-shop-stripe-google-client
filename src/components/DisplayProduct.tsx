@@ -33,7 +33,7 @@ export const DisplayProduct = () => {
           </p>
           <br />
           <p>
-            <b>In Stock:</b> {product?.stock} pc
+            <b>In Stock:</b> {product?.stock}
           </p>
           <br />
           <div className="add-to-cart">

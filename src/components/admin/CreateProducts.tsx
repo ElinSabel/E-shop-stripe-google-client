@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import { useProducts } from "../../hooks/useProducts";
 import { IProductCreate } from "../../models/Products";
 
@@ -14,7 +14,8 @@ export const CreateProducts = () => {
   });
   const { createProductHandler, loading } = useProducts();
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault()
     try {
       await createProductHandler(payload);
     } finally {
