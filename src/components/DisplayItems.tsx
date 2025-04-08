@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { useProducts } from "../hooks/useProducts";
 import { Item } from "../models/Items";
 import { DisplayProducts } from "./DisplayProducts";
@@ -56,6 +57,22 @@ export const DisplayItems = ({ i }: IDisplayItemsProps) => {
         </p>
         <h4 className="not-in-stock">Out of Stock</h4>
       </div>
+      <div className="add-to-cart">
+            <input
+              disabled
+              className="add-to-cart-input"
+              min={1}
+            />
+            <button
+              disabled
+              className="add-to-cart-button"
+            >
+              Add to cart
+            </button>
+            <button className="read-more-button">
+              <Link to={i.link}>Read More</Link>
+            </button>
+          </div>
     </article>
   );
 };
