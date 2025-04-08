@@ -13,7 +13,9 @@ export const Products = () => {
   const [pageIndex, setPageIndex] = useState<number>(1);
 
   useEffect(() => {
+    if (searchText.length > 0) {
       handleSearch();
+    }
   }, [searchText]);
 
   const handleSearch = async () => {

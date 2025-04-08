@@ -34,6 +34,10 @@ export const DisplayItems = ({ i }: IDisplayItemsProps) => {
     );
   }
 
+  if (i.title === "Doughnuts | Types of Doughnuts - Krispy Kreme") {
+    return null; 
+  }
+
   return (
     <article id="product-card" key={i.link}>
       <img
